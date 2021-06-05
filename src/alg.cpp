@@ -10,7 +10,7 @@ BST<std::string> makeTree(const char* filename) {
   std::ifstream file(filename);
   if (!file) {
     std::cout << "File error!" << std::endl;
-    return;
+    return 0;
   }
   std::string word;
   char toLowerCase;
