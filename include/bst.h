@@ -11,7 +11,7 @@ class BST {
     Node *left;
     Node *right;
   };
-  
+
  private:
   Node *root;
 
@@ -25,8 +25,9 @@ class BST {
       root->left = addNode(root->left, value);
     } else if (root->value < value) {
       root->right = addNode(root->right, value);
-    } else
+    } else {
         root->count++;
+    }
     return root;
   }
 
@@ -41,14 +42,14 @@ class BST {
   int searchNode(Node *root, T v) {
     if (root == nullptr)
       return 0;
-    else if (root->value == v) 
+    else if (root->value == v)
       return root->count;
     else if (root->value > v)
       return searchNode(root->left, v);
     else
       return searchNode(root->right, v);
   }
-  
+
  public:
   BST() :root(nullptr) {}
   ~BST() {}
