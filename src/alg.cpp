@@ -13,7 +13,7 @@ BST<std::string> makeTree(const char* filename) {
     return tree;
   }
   std::string word;
-  char toLowerCase;
+  char toLowerCase = 'a' - 'A';
   while (!file.eof()) {
     char ch = file.get();
     if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
